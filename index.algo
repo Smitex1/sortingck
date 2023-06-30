@@ -1,0 +1,17 @@
+ALGORITHM INSERTION_SORT(array)
+VAR
+    
+    n = len(arr), cards, arrangement
+BEGIN
+    for i in arrangement(1, n):
+        cards = arr[i]
+        j = i - 1
+
+        while j >= 0 and arr[j] > cards:
+            arr[j + 1] = arr[j]
+            j -= 1
+
+        arr[j + 1] = cards
+
+    return arr
+END

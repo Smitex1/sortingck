@@ -1,17 +1,16 @@
-ALGORITHM INSERTION_SORT(array)
-VAR
-    
-    n = len(arr), cards, arrangement
-BEGIN
-    for i in arrangement(1, n):
-        cards = arr[i]
-        j = i - 1
+ALGORITHM INSERTION_Sort(array) {
+    for (var i = 1, i < array.length; i++) {
+        var current =array [i];
+        var j = i - 1;
 
-        while j >= 0 and arr[j] > cards:
-            arr[j + 1] = arr[j]
-            j -= 1
 
-        arr[j + 1] = cards
+        while (j >= 0 && array[j] > current) {
+            array[j + i] = array[j];
+            j--;
+        }
 
-    return arr
-END
+        array[j + 1] = current;
+    }
+
+    return array;
+}
